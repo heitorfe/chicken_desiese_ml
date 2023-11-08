@@ -13,3 +13,4 @@ joblib
 types-pyYAMLscipy
 Flask
 Flask-Core
+-e .
