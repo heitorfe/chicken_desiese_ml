@@ -52,14 +52,14 @@ def create_directories(path_to_directiories : list, verbose = True):
 
 @ensure_annotations
 def save_json(path: Path, data: dict):
-    """save jsons data
+    """save json data
     
     Args:
         path (Path): path to json file
         data (dict): data to be saved in json file
     """
 
-    with open(path, "wb") as f:
+    with open(path, "w") as f:
         json.dump(data, f, indent=4)
 
     logger.info(f"json file saved at {path}")
