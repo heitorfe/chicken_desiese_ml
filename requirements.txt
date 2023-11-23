@@ -10,7 +10,7 @@ pyYAML
 #tqddm
 ensure==1.0.2
 joblib
-types-pyYAM
+types-pyYAML
 scipy
 Flask
 Flask-Core
