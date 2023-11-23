@@ -2,7 +2,7 @@ from src.cnnClassifier.config.configuration import ConfigurationManager
 from src.cnnClassifier.components.evaluation import Evaluation
 from src.cnnClassifier import logger
 
-class EvolutionPipeline:
+class EvaluationPipeline:
     def __init__(self) -> None:
         pass
     
@@ -18,7 +18,7 @@ STAGE_NAME = "Evaluation"
 try: 
     logger.info("***********************")
     logger.info(f"<<<<<< stage {STAGE_NAME} started<<<<<<")
-    model_evaluation = ModelTrainingPipeline()
+    model_evaluation = EvaluationPipeline()
     model_evaluation.main()
     logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
 
