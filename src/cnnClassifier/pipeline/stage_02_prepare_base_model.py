@@ -1,7 +1,7 @@
 from typing import Any
-from src.cnnClassifier.config.configuration import ConfigurationManager
-from src.cnnClassifier.components.prepare_base_model import PrepareBaseModel 
-from src.cnnClassifier import logger
+from cnnClassifier.config.configuration import ConfigurationManager
+from cnnClassifier.components.prepare_base_model import PrepareBaseModel 
+from cnnClassifier import logger
 
 STAGE_NAME = "Prepare base model"
 

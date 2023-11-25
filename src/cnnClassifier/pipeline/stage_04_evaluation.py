@@ -1,6 +1,6 @@
-from src.cnnClassifier.config.configuration import ConfigurationManager
-from src.cnnClassifier.components.evaluation import Evaluation
-from src.cnnClassifier import logger
+from cnnClassifier.config.configuration import ConfigurationManager
+from cnnClassifier.components.evaluation import Evaluation
+from cnnClassifier import logger
 
 class EvaluationPipeline:
     def __init__(self) -> None:
@@ -15,13 +15,14 @@ class EvaluationPipeline:
 
 STAGE_NAME = "Evaluation"
 
-try: 
-    logger.info("***********************")
-    logger.info(f"<<<<<< stage {STAGE_NAME} started<<<<<<")
-    model_evaluation = EvaluationPipeline()
-    model_evaluation.main()
-    logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
-
-except Exception as e:
-    logger.exception(e)
-    raise e
+if __name__ == '__main__':
+    try:
+        logger.info(f"*******************")
+        logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
+        obj = EvaluationPipeline()
+        obj.main()
+        logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+    except Exception as e:
+        logger.exception(e)
+        raise e
+            
